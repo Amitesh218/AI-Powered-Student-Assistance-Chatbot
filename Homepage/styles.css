@@ -30,14 +30,29 @@ body {
 
 /* Hero Section */
 .hero {
-  background: #f4f4f4;
+  position: relative; /* Ensure the overlay positions relative to this container */
+  background-image: url('your-image-path.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
   padding: 2em;
   text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+  z-index: 0; /* Ensure the overlay appears below the text but above the background image */
 }
 
 .hero-content {
-  max-width: 600px;
-  margin: 0 auto;
+  position: relative; /* This will ensure that text stays above the overlay */
+  z-index: 1; /* Text will be above the dark overlay */
 }
 
 .hero h2 {
