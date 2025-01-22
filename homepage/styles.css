@@ -81,4 +81,23 @@ footer {
   text-align: center;
   padding: 1em 0;
 }
+#chatbox {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+#chat-log div {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#chat-log div:nth-child(odd) {
+  background: #f0f0f0;
+}
+
+#chat-log div:nth-child(even) {
+  background: #e8f4fc;
+}
 
