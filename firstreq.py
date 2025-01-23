@@ -5,3 +5,4 @@ model = genai.GenerativeModel("gemini-2.0-flash-exp")
 response = model.generate_content("Explain how AI works")
 print(response.text)
 
+#ncice broo
