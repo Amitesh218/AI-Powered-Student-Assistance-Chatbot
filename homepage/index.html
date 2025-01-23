@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admission Chatbot</title>
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1>Admission Chatbot</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="hero">
-    <div class="hero-content">
-      <h2>Welcome to the Admission Chatbot</h2>
-      <p>Your one-stop solution for all admission-related queries in Rajasthan!</p>
-      <button id="chat-button">Ask the Chatbot</button>
-      <div id="chatbox" style="display:none; position:fixed; bottom:20px; right:20px; width:300px; height:400px; border:1px solid #ccc; padding:10px; background:white; overflow-y:auto;">
-      <div id="chat-log"></div>
-      <input type="text" id="chat-input" placeholder="Type your question..." style="width:80%; padding:5px;">
-      <button id="send-button" style="width:18%; padding:5px;">Send</button>
-</div>
-
+    <div class="chat-container">
+        <h1>AI Chatbot</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message here..." />
+        <button id="send-btn">Send</button>
     </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Department of Technical Education, Rajasthan</p>
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
 

@@ -1,59 +1,33 @@
-const chatButton = document.getElementById('chat-button');
-const chatbox = document.getElementById('chatbox');
-const sendButton = document.getElementById('send-button');
-const chatInput = document.getElementById('chat-input');
-const chatLog = document.getElementById('chat-log');
+document.getElementById("send-btn").addEventListener("click", async () => {
+    const userInput = document.getElementById("user-input").value;
+    const chatBox = document.getElementById("chat-box");
 
-// Display the chatbot window when the button is clicked
-chatButton.addEventListener('click', () => {
-  chatbox.style.display = 'block';
-});
+    if (!userInput.trim()) return; // Prevent empty messages
 
-// Fetch OpenAI GPT response
-async function fetchChatbotResponse(userMessage) {
-  const apiKey = "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"; // Replace with your regenerated API key
-  const apiUrl = "https://api.openai.com/v1/completions";
+    // Display the user's message
+    const userMessage = document.createElement("div");
+    userMessage.textContent = userInput;
+    userMessage.className = "user-message";
+    chatBox.appendChild(userMessage);
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-  const response = await fetch(apiUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "text-davinci-003", // Or another model like gpt-3.5-turbo
-      prompt: userMessage,
-      max_tokens: 150,
-      temperature: 0.7,
-    }),
-  });
+    // Clear the input field
+    document.getElementById("user-input").value = "";
 
-  const data = await response.json();
-  return data.choices[0].text.trim();
-  console.log(response);
+    // Call your backend API to get a response
+    const response = await fetch("http://localhost:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userInput }),
+    });
 
-}
+    const data = await response.json();
 
-// Handle user input and display messages
-sendButton.addEventListener('click', async () => {
-  const userMessage = chatInput.value.trim();
-  if (!userMessage) return;
-
-  // Display the user's message
-  const userMessageElement = document.createElement('div');
-  userMessageElement.textContent = `You: ${userMessage}`;
-  chatLog.appendChild(userMessageElement);
-
-  // Clear input field
-  chatInput.value = '';
-
-  // Fetch and display chatbot response
-  const botResponse = await fetchChatbotResponse(userMessage);
-  const botMessageElement = document.createElement('div');
-  botMessageElement.textContent = `Bot: ${botResponse}`;
-  chatLog.appendChild(botMessageElement);
-
-  // Scroll to the bottom
-  chatLog.scrollTop = chatLog.scrollHeight;
+    // Display the bot's response
+    const botMessage = document.createElement("div");
+    botMessage.textContent = data.reply || "Error fetching response.";
+    botMessage.className = "bot-message";
+    chatBox.appendChild(botMessage);
+    chatBox.scrollTop = chatBox.scrollHeight;
 });
 
