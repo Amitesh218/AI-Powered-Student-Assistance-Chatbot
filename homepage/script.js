@@ -30,6 +30,8 @@ async function fetchChatbotResponse(userMessage) {
 
   const data = await response.json();
   return data.choices[0].text.trim();
+  console.log(response);
+
 }
 
 // Handle user input and display messages
