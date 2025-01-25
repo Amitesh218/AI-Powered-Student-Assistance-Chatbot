@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generative AI Prompt</title>
-    <link rel="icon" href="arrow-204-16.ico">
+    <title>Chat with AI</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <h1>Chat with AI</h1>
+        <p>Your personal AI assistant powered by Google's Gemini.</p>
+    </div>
 
+    <!-- Chat Container -->
     <div id="chatContainer" class="chat-container"></div>
+
+    <!-- Input Section -->
     <div class="input-container">
         <input type="text" id="userPrompt" placeholder="Type your question..." />
         <button id="submitPrompt">Send</button>
     </div>
 
-    <!-- Always include your JavaScript file -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="test.js" type="module"></script>
-    
 </body>
 </html>
+
