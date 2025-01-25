@@ -1,68 +1,120 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow: hidden; /* Prevent scrolling of the entire page */
+    background: black;
+    color: #333;
 }
+
+
 
 .top-bar {
-    width: 100%;
-    background-color: #007bff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto; /* Adjusts height dynamically based on content */
+    padding: 10px 20px; /* Adds padding for spacing */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
     color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-.top-bar h1 {
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds spacing between logo and text */
+}
+
+.logo {
+    height: 50px; /* Adjust the logo size */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the logo is fully visible */
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column; /* Stacks heading and tagline vertically */
+}
+
+h1 {
     margin: 0;
     font-size: 1.5rem;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
 }
 
-.top-bar p {
-    margin: 5px 0 0;
+.tagline {
+    margin: 0;
     font-size: 0.9rem;
+    font-family: "Arial", sans-serif;
+    color: #ddd; /* Lighter color for subtle emphasis */
 }
+
 
 .chat-container {
-    flex: 1;
-    padding: 10px;
+    margin-top: 71px; /* Adds space below the top bar */
+    padding: 20px;
+    height: calc(100vh - 80px); /* Adjust height to account for the top bar */
     overflow-y: auto;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to top right, #ff007f, #007fff);
+    border-radius: 8px;
 }
 
+
 .chat-container div {
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 5px;
+    display: inline-block; /* Adjusts width dynamically */
+    max-width: 70%; /* Limits width for better readability */
+    padding: 8px 12px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    word-break: break-word;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.); /* Soft shadow for better visibility */
 }
 
 .user-message {
-    background-color: #e1f5fe;
-    align-self: flex-end;
+    background-color: rgba(0, 0, 0, 0.8); /* Light blue translucent */
+    align-self: flex-end; /* Aligns user messages to the right */
     text-align: right;
+    font-family: Arial, Helvetica, sans-serif; /* Font for user messages */
+    font-style: normal; /* Adds a slight style variation */
+    color: #ffffff; /* Complementary color for better visibility */
+    backdrop-filter: blur(8px); /* Adds blur for a frosted glass effect */
 }
 
 .ai-response {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: transparent; /* Fully transparent */
+    align-self: flex-start; /* Aligns AI responses to the left */
+    font-family: Arial, Helvetica, sans-serif; /* Font for AI responses */
+    font-weight: 500; /* Slightly bold for readability */
+    color: #ffffff; /* Darker color for contrast */
+    border: 0px solid rgba(226, 223, 223, 0.226); /* Subtle border for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0); 
 }
+
 
 .input-container {
     display: flex;
     padding: 10px;
-    border-top: 1px solid #ddd;
-    background-color: #fff;
+    border-top: 1px solid #3a3a3a;
+    background-color: #000000;
 }
 
 #userPrompt {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #3d0a0a;
     border-radius: 5px;
 }
 
@@ -73,6 +125,7 @@ body {
     border-radius: 5px;
     background-color: #007bff;
     color: #fff;
+    font-weight: 700;
     cursor: pointer;
 }
 
