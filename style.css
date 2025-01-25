@@ -59,7 +59,7 @@ h1 {
 
 
 .chat-container {
-    margin-top: 71px; /* Adds space below the top bar */
+    margin-top: 73px; /* Adds space below the top bar */
     padding: 20px;
     height: calc(100vh - 80px); /* Adjust height to account for the top bar */
     overflow-y: auto;
