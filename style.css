@@ -67,6 +67,10 @@ h1 {
     flex-direction: column;
     gap: 10px;
     background: linear-gradient(to top right, #ff007f, #007fff);
+    background-image: url('210424.jpg'); /* Set the background image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     border-radius: 8px;
 }
 
@@ -92,7 +96,7 @@ h1 {
 }
 
 .ai-response {
-    background-color: transparent; /* Fully transparent */
+    background-color: rgba(0, 0, 0, 0.5); /* Fully transparent */
     align-self: flex-start; /* Aligns AI responses to the left */
     font-family: Arial, Helvetica, sans-serif; /* Font for AI responses */
     font-weight: 500; /* Slightly bold for readability */
@@ -100,7 +104,7 @@ h1 {
     padding: 8px 12px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 0 !important; /* No rounded corners */
+    border-radius: 3 !important; /* No rounded corners */
     position: relative;
 }
 
