@@ -55,4 +55,16 @@ document.getElementById("userPrompt").addEventListener("keydown", (event) => {
         event.preventDefault(); // Prevent default form submission (if any)
         handleInput();
     }
+    document.getElementById("uploadImageButton").addEventListener("click", function() {
+        document.getElementById("uploadImage").click(); // Triggers the file input
+    });
+    
+    document.getElementById("uploadImage").addEventListener("change", function(event) {
+        const file = event.target.files[0]; // Get the selected file
+        if (file) {
+            console.log("File selected:", file.name); // You can process the file here (e.g., display, upload, etc.)
+        }
+    });
+    
+    
 });

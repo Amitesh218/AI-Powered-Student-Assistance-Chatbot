@@ -156,3 +156,19 @@ h1 {
 #submitPrompt:hover {
     background-color: #4c71d9;
 }
+
+#uploadImageButton {
+    margin-left: 10px;
+    padding: 10px 20px; /* Same padding as #submitPrompt */
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#uploadImageButton:hover {
+    background-color: #4c71d9; /* Same hover effect as #submitPrompt */
+}
+
