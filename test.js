@@ -18,7 +18,7 @@ async function getAIResponse(prompt) {
 
         // Add AI response
         const aiResponse = document.createElement("div");
-        aiResponse.className = "ai-response";
+        aiResponse.className = " ai-response";
         aiResponse.innerHTML = marked.parse(result.response.text()); // Convert and render Markdown
         chatContainer.appendChild(aiResponse);
 
