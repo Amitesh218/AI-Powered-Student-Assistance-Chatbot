@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "https://cdn.skypack.dev/@google/generative-a
 
 async function getAIResponse(prompt) {
     try {
-        const genAI = new GoogleGenerativeAI("AIzaSyBKDjmVVln_MYuo7Nt2Of95zH-HRFOFFNA");
+        const genAI = new GoogleGenerativeAI("YOUR_API_KEY");
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
         const result = await model.generateContent(prompt);
