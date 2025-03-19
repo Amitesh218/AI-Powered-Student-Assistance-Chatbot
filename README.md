@@ -19,7 +19,8 @@ With the continuous rise in enquiries, it is becoming increasingly difficult for
 
 ### The UI
 
-https://github.com/Amitesh218/AI-Powered-Student-Assistance-Chatbot/blob/eb0ce5f77654d2c2eb921e869429c1acd4cb9d03/testss.png
+![alt text](https://github.com/Amitesh218/AI-Powered-Student-Assistance-Chatbot/blob/eb0ce5f77654d2c2eb921e869429c1acd4cb9d03/testss.png)
+
 
 
 ### How to use:
