@@ -1,5 +1,6 @@
-# Problem statement:
+This project was made in accordance to the topic given in SIH (Smart India Hackathon), the problem statement being as follows:
 
+---------------------------
 ### Background: 
 There are numerous engineering and polytechnic institutes in Rajasthan running under the Department of Technical Education, Government of Rajasthan. Notably, during the admission process, there is a significant increase in enquiries from various groups, including students, their parents, and other stakeholders. These enquiries cover a wide range of queries related to admission process, eligibility criteria, information about different colleges, fee structure, curriculum , scholarship , hostel facilities, previous year's college and branch-specific allotments placement opportunities and many more. Currently, stakeholders have tocontact colleges individually through phone or email, and sometimes even visit the colleges personally. This process is not only cumbersome for the stakeholders but also demanding to pool manpower for the colleges to manage these inquiries. 
 
@@ -14,3 +15,22 @@ With the continuous rise in enquiries, it is becoming increasingly difficult for
 2. Enhanced User Experience: Design an intuitive interface that allows users to navigate easily and find information quickly. The interface should be straightforward, accessible on common platform, and capable of understanding natural language, ensuring user-friendliness. 
 3. Reduced Workload: By automating responses to Frequently Asked Questions (FAQ’s), the chatbot will reduce the workload on department staff, allowing them to concentrate on more complex and urgent tasks. 
 4. Data Insights: The chatbot will gather valuable data from user interactions, helping the department to identify common concerns and optimize it’s services based on these insights.
+--------------------------------------------------------------------------------------------------
+
+### The UI
+
+testss.png
+
+
+### How to use:
+
+To run the chatbot, you will need a Gemini API Key.
+
+The steps are as follows:
+
+- Clone the repository
+- Open test.js in your editor and replace the 'YOUR_API_KEY' part with your Gemini API Key
+- Open testindex.html with your browser (as a live server)
+- Type away your queries!
+
+
